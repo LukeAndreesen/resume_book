@@ -1,8 +1,45 @@
 # Resume Book Setup Guide
 
-## Introduction
+## Data Preparation Steps
 
-This guide provides step-by-step instructions to set up Python on your macOS computer and install the necessary dependencies to run the **Resume Book** program.
+Before setting up the environment, you need to prepare the data in **Excel** by following these steps:
+
+1. **Export Data as CSV**
+
+   - Download the latest attendee data from **Wufoo** as a **CSV file**.
+
+2. **Open Data in Excel**
+
+   - Open the exported CSV file in a **new Excel window**.
+
+3. **Copy and Paste New Entries**
+
+   - Copy the new attendee entries from the CSV file.
+   - Paste them into the **"Attendees - Raw"** sheet of the file **`resumes.xlsm`**.
+
+4. **Sort Alphabetically by First Name**
+
+   - Select the data range.
+   - Use the **Sort** function in Excel to arrange the entries alphabetically by **First Name**.
+
+5. **Remove Duplicates**
+
+   - Highlight the newly added entries.
+   - Use the **Remove Duplicates** function to eliminate duplicate records.
+
+6. **Copy and Paste Cleaned Entries**
+
+   - Copy the **de-duplicated** entries from **"Attendees - Raw"**.
+   - Paste them into the **"Attendees - Cleaned"** sheet.
+
+7. **Apply Hyperlink Formula**
+
+   - Drag the formula in **Column Y** (`=GetHyperlink(cell)`) down to apply it to the new entries.
+
+8. **Save the Spreadsheet**
+   - Make sure to **save** `resumes.xlsm` before closing Excel.
+
+---
 
 ## Installation Instructions
 
@@ -63,3 +100,5 @@ Once Python is installed, you can install additional dependencies by running:
 ```sh
 pip install -r requirements.txt
 ```
+
+You're all set! 🚀

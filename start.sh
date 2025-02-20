@@ -3,8 +3,8 @@
 # Install Python
 brew install python
 # Set up Python environment
-python3 -m venv venv
+python3 -m venv env
 # Activate the virtual environment
-source venv/bin/activate
+source install.sh
 # Install required packages
 pip install -r requirements.txt

@@ -1,1 +1,3 @@
 resumes/
+__pycache__/
+.*

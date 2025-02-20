@@ -1,18 +1,28 @@
 import os
 import pandas as pd
 import requests
+import shutil
 from tqdm import tqdm
 
-# Path to your CSV file
-csv_file = "resumes.csv"
 
-# Folder to store the downloaded resumes
+# Paths
+xlsm_file = "resumes.xlsm"  # Replace with the actual file path
+sheet_name = "Attendees - Cleaned"
+csv_file = "resumes.csv"
 output_folder = "resume_to_merge"
+
+# Remove existing CSV file and folder if they exist
+if os.path.exists(csv_file):
+    os.remove(csv_file)
+if os.path.exists(output_folder):
+    shutil.rmtree(output_folder)
+
+# Create a fresh output folder
 os.makedirs(output_folder, exist_ok=True)
 
-# Read the CSV file
-df = pd.read_csv(csv_file, usecols=["Resume URL"], encoding="ISO-8859-1")  # or "Windows-1252"
-
+# Load the specific sheet from the .xlsm file and save as CSV
+df = pd.read_excel(xlsm_file, sheet_name=sheet_name, usecols=["Resume URL"], engine="openpyxl")
+df.to_csv(csv_file, index=False, encoding="ISO-8859-1")  # Save as CSV
 # Ensure the column exists
 if "Resume URL" not in df.columns:
     raise ValueError("The CSV file does not contain a 'Resume URL' column.")
