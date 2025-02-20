@@ -41,11 +41,17 @@ Before setting up the environment, you need to prepare the data in **Excel** by 
 
 ---
 
-## Installation Instructions
+## Running the program
+
+First, add the files to your local computer:
+
+```sh
+git clone https://github.com/LukeAndreesen/resume_book.git
+```
 
 ### 1. Run the Setup Script
 
-Open **Terminal**, navigate to the project folder, and execute the setup script:
+Open **Terminal** app on Mac, navigate to the project folder, and execute the setup script:
 
 ```sh
 cd path/to/resume_book
