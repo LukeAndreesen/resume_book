@@ -1,7 +1,7 @@
 import os
 from PyPDF2 import PdfMerger
 
-folder_path = "resumes"
+folder_path = "resume_to_merge"
 output_pdf = "merged.pdf"
 
 merger = PdfMerger()
