@@ -63,7 +63,19 @@ If prompted, simply **press Enter** to accept and continue the installation.
 
 ### 4. Running the Program
 
-Once the setup is complete, you can start using the **Resume Book** program.
+Once the setup is complete, you can extract resume pdfs by running:
+
+```sh
+python3 resumes.py
+```
+
+Then you can merge the resumes by running:
+
+```sh
+python3 merge.py
+```
+
+The merged resumes will be saved in the same folder as a single file.
 
 ---
 
