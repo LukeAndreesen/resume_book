@@ -89,7 +89,7 @@ cd Desktop/resume_book
 Type this command and press **Enter**:
 
 ```sh
-bash start.sh
+source start.sh
 ```
 
 🔹 If you see a **password prompt**, type your **computer password** and press **Enter**.  
