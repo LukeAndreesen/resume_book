@@ -1,6 +1,6 @@
 # 📘 Resume Book Setup Guide
 
-This guide will walk you through preparing attendee data and running the resume book program, even if you've **never used a terminal or written code before**. Follow the steps carefully, and you'll be set up in no time!
+This guide will walk you through preparing attendee data and running the resume book program.
 
 ---
 
