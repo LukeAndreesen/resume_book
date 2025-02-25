@@ -8,13 +8,12 @@ This guide provides step-by-step instructions to prepare attendee data and run t
 
 ### 1️⃣ Download the Repository
 
-1. Go to the Resume Book project on GitHub:  
-   [GitHub: Resume Book](https://github.com/LukeAndreesen/resume_book)
-2. Click the **green "Code" button**.
-3. Click **"Download ZIP"**.
-4. Once the download is complete, locate the ZIP file in **Finder** (typically in the "Downloads" folder).
-5. **Double-click** the ZIP file to extract it. This will create a folder named **`resume_book-main`**.
-6. Move the **`resume_book-main`** folder to your **Desktop**.
+
+1. Click the **green "Code" button** on the top right of this page.
+2. Click **"Download ZIP"**.
+3. Once the download is complete, locate the ZIP file in **Finder** (typically in the "Downloads" folder).
+4. **Double-click** the ZIP file to extract it. This will create a folder named **`resume_book-main`**.
+5. Move the **`resume_book-main`** folder to your **Desktop**.
 
 ### 2️⃣ Locate the Downloaded Files
 
