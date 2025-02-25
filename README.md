@@ -13,7 +13,6 @@ This guide provides step-by-step instructions to prepare attendee data and run t
 2. Click **"Download ZIP"**.
 3. Once the download is complete, locate the ZIP file in **Finder** (typically in the "Downloads" folder).
 4. **Double-click** the ZIP file to extract it. This will create a folder named **`resume_book-main`**.
-5. Move the **`resume_book-main`** folder to your **Desktop**.
 
 ### 2️⃣ Locate the Downloaded Files
 
@@ -21,14 +20,13 @@ To determine the exact path where the files are stored:
 
 1. Open **Finder**.
 2. Navigate to where the **`resume_book-main`** folder is located (e.g., "Desktop" or "Downloads").
-3. **Right-click** on the `resume_book-main` folder and select **"Get Info"**.
-4. Look at the **"Where"** field to see the full file path.
+3. **Right-click** on the `resume_book-main` folder and hold the option key, then select "Copy resume_book-main" as Pathname. This will copy the path to the file to clipboard, and will look something like "/Users/lukeandreesen/Downloads/resume_book-main"
 
 ---
 
 ## 📝 **Step 2: Prepare Your Data in Excel**
 
-The file **`resumes.xlsm`** is included in the GitHub repository. Open and edit it as follows:
+The file **`resumes.xlsm`** is in the folder you downloaded. Open and edit it as follows:
 
 ### 1️⃣ Open the `resumes.xlsm` File
 
