@@ -71,7 +71,7 @@ The file **`resumes.xlsm`** is in the folder you downloaded. Open and edit it as
 
 - Press **Command (⌘) + Spacebar**, type **"Terminal"**, and press **Enter**.
 
-### 2️⃣ Navigate to the `resume_book-main` Folder
+### 2️⃣ Navigate to the `resume_book-main` Folder (using the path you copied earlier)
 
 Type the following command and press **Enter**:
 
