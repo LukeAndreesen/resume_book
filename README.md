@@ -1,4 +1,3 @@
-````
 # Resume Book Setup Guide
 
 This guide provides step-by-step instructions to prepare attendee data and run the resume book program.
