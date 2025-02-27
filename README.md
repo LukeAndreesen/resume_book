@@ -32,6 +32,7 @@ The file **`resumes.xlsm`** is in the folder you downloaded. Open and edit it as
 
 1. Navigate to the **`resume_book-main`** folder.
 2. Double-click on **`resumes.xlsm`** to open it in **Microsoft Excel**.
+3. Selecte the "Enable Macros" option when prompted (this enables custom formula to get the PDF link)
 
 ### 2️⃣ Copy and Paste New Entries
 
