@@ -4,7 +4,6 @@ import requests
 import shutil
 from tqdm import tqdm
 
-
 # Paths
 xlsm_file = "resumes.xlsm"  # Replace with the actual file path
 sheet_name = "Attendees - Cleaned"
@@ -21,14 +20,21 @@ if os.path.exists(output_folder):
 os.makedirs(output_folder, exist_ok=True)
 
 # Load the specific sheet from the .xlsm file and save as CSV
-df = pd.read_excel(xlsm_file, sheet_name=sheet_name, usecols=["Resume URL"], engine="openpyxl")
+df = pd.read_excel(xlsm_file, sheet_name=sheet_name, usecols=["Resume URL", "Name", "Last"], engine="openpyxl")
 df.to_csv(csv_file, index=False, encoding="ISO-8859-1")  # Save as CSV
-# Ensure the column exists
-if "Resume URL" not in df.columns:
-    raise ValueError("The CSV file does not contain a 'Resume URL' column.")
+
+# Ensure necessary columns exist
+required_columns = ["Resume URL", "Name", "Last"]
+for col in required_columns:
+    if col not in df.columns:
+        raise ValueError(f"The CSV file does not contain a '{col}' column.")
 
 # Iterate over the resume URLs and download each file
-for idx, url in tqdm(enumerate(df["Resume URL"]), total=len(df)):
+for idx, row in tqdm(df.iterrows(), total=len(df)):
+    url = row["Resume URL"]
+    first_name = str(row["Name"]).strip().replace(" ", "_")
+    last_name = str(row["Last"]).strip().replace(" ", "_")
+
     if pd.isna(url):  # Skip if URL is missing
         continue
 
@@ -36,8 +42,11 @@ for idx, url in tqdm(enumerate(df["Resume URL"]), total=len(df)):
         response = requests.get(url, stream=True)
         response.raise_for_status()  # Check for HTTP request errors
 
-        # Generate a filename based on the index
-        filename = os.path.join(output_folder, f"resume_{idx+1}.pdf")
+        # Generate a filename based on first and last name
+        if pd.notna(first_name) and pd.notna(last_name) and first_name and last_name:
+            filename = os.path.join(output_folder, f"{first_name}_{last_name}.pdf")
+        else:
+            filename = os.path.join(output_folder, f"resume_{idx+1}.pdf")
 
         # Save the PDF file
         with open(filename, "wb") as file:

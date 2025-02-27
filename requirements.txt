@@ -1,4 +1,7 @@
 PyPDF2
+reportlab
+python-docx
+pdfkit
 pandas
 requests
 tqdm
